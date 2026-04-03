@@ -23,12 +23,19 @@ const LoginPopup = ({setShowLogin}) => {
 
    const onLogin = async (event) =>{
         event.preventDefault()
+
+        console.log("Login function triggered"); 
+        
+
         let newUrl = url;
         if(currentState==='Login'){
             newUrl+= "/api/user/login"
         }else{
             newUrl += "/api/user/register"
         }
+
+        console.log("Final URL:", newUrl); 
+
 
         const response = await axios.post(newUrl,data);
 

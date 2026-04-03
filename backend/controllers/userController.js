@@ -7,6 +7,7 @@ import validator from 'validator'
 const loginUser = async (req,res) =>{
     const {email, password} = req.body;
     try {
+        
         const user = await userModel.findOne({email});
 
         if(!user){
@@ -35,7 +36,7 @@ const createToken = (id) =>{
 const registerUser = async (req, res) =>{
     const {name,password,email} = req.body;
     try {
-
+        
         // checking is user already exists
         const exists = await userModel.findOne({email});
         if(exists){
