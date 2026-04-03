@@ -14,4 +14,4 @@ export const assets ={
     parcel_icon
 }
 
-export const url = 'http://localhost:8000'
+export const url = 'https://feastly-backend-i4v5.onrender.com'
